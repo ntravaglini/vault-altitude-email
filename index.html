@@ -36,6 +36,7 @@
         table {border-spacing: 0!important;border-collapse: collapse!important;table-layout: fixed!important;margin: 0 auto!important;empty-cells: show;}
         *[x-apple-data-detectors], .x-gmail-data-detectors, .x-gmail-data-detectors *, .aBn {border-bottom: 0!important;cursor: default!important;color: inherit!important;text-decoration: none!important;font-size: inherit!important;font-family: inherit!important;font-weight: inherit!important;line-height: inherit!important;}
         table, td, div, h1, h2, h3, h4, p {font-family:'inter', Arial, sans-serif;}
+        td {padding:0;}
     </style>
 
     <!-- ADDITIONAL STYLES -->
@@ -49,24 +50,30 @@
 
 <body width="100%" link="#000000" bgcolor="#FFF" vlink="#C9C9C9" style="margin:0; padding:0; word-spacing: normal; background:#FFF;">
 
+    <!--FOR SCREENREADER ACCESIBILITY-->
     <div role="article" aria-roledescription="email" lang="en" style="text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color:#939297;">
 
+        <!--SCAFFOLD TO CENTER EMAIL ACROSS ALL CLIENTS-->
         <table role="presentation" style="width:100%; border:none; border-spacing:0;">
+        <!--border-spacing set on a table is the CSS equivalent of the HTML cellspacing attribute on the table element.-->
             <tr>
                 <td align="center" style="padding:0;">
+                <!--setting padding on a table cell is the equivalent of the older method of setting cellpadding on the table element-->
 
-                    <!-- ghost table because main container will use max-width property which isn't supported on all Outlook versions -->
+                    <!-- ghost table because MAIN CONTAINER will use max-width property which isn't supported on all Outlook versions -->
                     <!--[if mso]> 
                     <table role="presentation" align="center" style="width:600px;">
                     <tr><td>
                     <![end if]-->
 
+                        <!--table role set to presentation. This is very important for accessibility, as it ensures that screen readers will only announce the content of the table, rather than the default of also announcing the structure-->
+                        <!--MAIN CONTAINER-->
                         <table role="presentation" style="width:100%; max-width:600px; border:none; border-spacing:0; text-align:left; font-family:inter;font-size:16px; line-height:1.5; color:#363636;">
 
                             <!--CENTERED LOGO-->
                             <tr>
                                 <td style="padding:40px 30px 30px 30px; text-align:center; font-size:24px; font-weight:700; line-height:1;">
-                                    <a href="#" style="text-decoration:none;"><img src="img/Gucci-Logo.png" alt="hero-image" width="165" style="width:165px; max-width:80%;height:auto; border:none; text-decoration:none; color:#FFF"></a>
+                                    <a href="#" style="text-decoration:none;"><img src="img/paw-logo.png" alt="hero-image" width="165" style="width:165px; max-width:80%;height:auto; border:none; text-decoration:none; color:#FFF"></a>
                                 </td>
                             </tr>
                             
@@ -81,37 +88,84 @@
                             <!--FULL-WIDTH IMAGE-->
                             <tr>
                                 <td>
-                                    <a href="#" target="_blank" style="text-decoration:none;"><img src="img/hero-image.jpg" alt="Hero Image" width="600" style="width:100%; height:auto; display:block; border:none; text-decoration:none; color:#363636;"></a>
+                                    <a href="#" target="_blank" style="text-decoration:none;"><img src="img/puppycorn-hero.jpg" alt="Hero Image" width="600" style="width:100%; height:auto; display:block; border:none; text-decoration:none; color:#363636;"></a>
                                 </td>
                             </tr>
 
-                            <!--TWO-COLUMN SECTION THAT STACKS ON MOBILE-->
+                            <!--OFFSET TWO-COLUMN SECTION THAT STACKS ON MOBILE-->
                             <tr>
                                 <td style="padding:35px 30px 11px; font-size:0; background-color:#FFF; border-bottom:1px solid #F0F0F5; border-color:rgba(201,201,207,.35);">
 
-                                    <!--[if mso]>
-                                    <table role="presentation" width="600">
-                                    <tr>
-                                    <td style="width:300px;" align="left" valign="top">
-                                    <![end if]-->
-                                        <div class="col-medium" style="display:inline-block; width:100%; max-width:270px; vertical-align:top; text-align:left; font-family:'inter',Arial,sans-serif; font-size:16px; line-height:1.5; color:#363636;
-                                        text-align:center;">
-                                            <img src="img/king-puppy.jpg" width="300" alt="lion puppy" style="width:300px; max-width:80%; margin-bottom:20px;">
+                                    <!--[if mso]> 
+                                    <table role="presentation" width="100%"> 
+                                    <tr> 
+                                    <td style="width:145px;" align="left" valign="top"> 
+                                    <![endif]-->
+                                        <div class="col-sml" style="display:inline-block; width:100%; max-width:145px; vertical-align:top; text-align:left;">
+                                            <img src="img/king-puppy.jpg" width="115" alt="" style="width:115px;max-width:80%;margin-bottom:20px;">
                                         </div>
-                                    <!--[if mso]>
-                                    </td>
-                                    <td style="width:300px; padding-bottom:20px;" valign="top">
-                                    <![end if]-->
-                                        <div class="col-medium" style="display:inline-block; width:100%; max-width:270px; vertical-align:top; padding-bottom:20px; font-family:'inter',Arial,sans-serif; font-size:16px; line-height:1.5; color:#363636; text-align:center">
-                                            <img src="img/king-puppy.jpg" width="300" alt="lion puppy" style="width:300px; max-width:80%; margin-bottom:20px;">
+                                    <!--[if mso]> 
+                                    </td> 
+                                    <td style="width:395px;padding-bottom:20px;" valign="top"> 
+                                    <![endif]-->
+                                        <div class="col-lge" style="display:inline-block; width:100%; max-width:395px; vertical-align:top; padding-bottom:20px; font-family:Arial,sans-serif;font-size:16px; line-height:22px; color:#363636;
+                                        ">
+                                            <p style="margin-top:0;margin-bottom:12px;">Nullam mollis sapien vel cursus fermentum. Integer porttitor augue id ligula facilisis pharetra. In eu ex et elit ultricies ornare nec ac ex. Mauris sapien massa, placerat non venenatis et, tincidunt eget leo.</p>
+                                            <p style="margin-top:0;margin-bottom:18px;">Nam non ante risus. Vestibulum vitae eleifend nisl, quis vehicula justo. Integer viverra efficitur pharetra. Nullam eget erat nibh.</p>
+
+                                            <p style="margin:0;">
+                                                <a href="https://example.com/" style="background: #ff3884; text-decoration: none; padding: 10px 25px; color: #ffffff; border-radius: 4px; display:inline-block; mso-padding-alt:0;text-underline-color:#ff3884">
+                                                <!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%;mso-text-raise:20pt">&nbsp;</i>
+                                                <![endif]-->
+                                                <span style="mso-text-raise:10pt;font-weight:bold;">Claim yours now</span>
+                                                <!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%">&nbsp;</i>
+                                                <![endif]-->
+                                                </a>
+                                            </p>
+                                            
                                         </div>
-                                    <!--[if mso]>
-                                    </td>
-                                    </tr>
-                                    </table>
-                                    <![end if]-->
+                                    <!--[if mso]> 
+                                    </td> 
+                                    </tr> 
+                                    </table> 
+                                    <![endif]-->
+                                    
+                                </td>
+                            </tr>
+
+                            <!--FULL-WIDTH IMAGE WITH PADDING AND BORDER-->
+                            <tr>
+                                <td style="padding:30px;background-color:#ffffff;border-bottom:1px solid #f0f0f5;border-color:rgba(201,201,207,.35);">
+                                    <a href="#" style="text-decoration:none;"><img src="img/hipster-puppy.jpg" width="540" alt="Hipster Puppy" style="width:100%;height:auto;"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:30px;background-color:#ffffff;">
+                                    <p style="margin:0;">Duis sit amet accumsan nibh, varius tincidunt lectus. Quisque commodo, nulla ac feugiat cursus, arcu orci condimentum tellus, vel placerat libero sapien et libero. Suspendisse auctor vel orci nec finibus.</p>
+                                </td>
+                            </tr>
+
+                            <!--FOOTER-->
+                            <tr>
+                                <td style="padding:30px;text-align:center;font-size:12px;background-color:#404040;color:#cccccc;">
+
+                                    <p style="margin:0 0 8px 0;">
+                                        <a href="http://www.facebook.com/" style="text-decoration:none;">
+                                            <img src="img/facebook.png" width="40" height="40" alt="f" style="display:inline-block;color:#cccccc;">
+                                        </a> 
+                                        <a href="http://www.twitter.com/" style="text-decoration:none;">
+                                            <img src="img/twitter.png" width="40" height="40" alt="t" style="display:inline-block;color:#cccccc;">
+                                        </a>
+                                    </p>
+
+                                    <p style="margin:0;font-size:14px;line-height:20px;">&reg; Someone | Somewhere 2021<br><a class="unsub" href="#" style="color:#cccccc;text-decoration:underline;">Unsubscribe Instantly</a></p>
+
 
                                 </td>
+                            </tr>
+
+                            <tr>
+                                <td height="25" style="height:25px;"></td>
                             </tr>
 
                         </table>
